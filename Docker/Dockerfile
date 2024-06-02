@@ -36,14 +36,14 @@ RUN echo 'usr01:usr01' | chpasswd
 
 # miniconda 다운로드>설치>환경설정
 # Python version 3.11
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-py311_23.11.0-2-Linux-x86_64.sh
+RUN wget --no-check-certificate https://repo.anaconda.com/miniconda/Miniconda3-py311_23.11.0-2-Linux-x86_64.sh
 RUN sh Miniconda3-py311_23.11.0-2-Linux-x86_64.sh -b -p /opt/miniconda3
 RUN rm -rf Miniconda3-py311_23.11.0-2-Linux-x86_64.sh
 
 ENV PATH="/opt/miniconda3/bin:${PATH}"
 
 # Python 가상환경 패키지 다운로드
-RUN pip install pipenv
+#RUN pip install pipenv
 
 # SSH 서비스 활성화
 RUN systemctl enable sshd
