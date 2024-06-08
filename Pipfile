@@ -9,9 +9,9 @@ numpy = "==1.23.5"
 scikit-learn = "==1.2.2"
 jupyterlab = "*"
 pandas = "==2.2.1"
+pyproj = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.11"
-python_full_version = "3.11.5"
